@@ -1,0 +1,1 @@
+r.config(bg='blue')

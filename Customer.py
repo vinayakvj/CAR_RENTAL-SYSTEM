@@ -6,14 +6,13 @@ r = tk.Tk()
 r.geometry("500x200")
 r.title('RENT A CAR')
 
+
+
 conn=psyco.connect(database = "gdqaunqg",user = "gdqaunqg",password = "Ftu_ftMT60OZSFCMFWhFKc8Cf0mHgVSd",host ="jelani.db.elephantsql.com",port = "5432")
 cur = conn.cursor()
 print("DATABASE CONNECTED")
 
-
-
 def success():
-    global f;global name;global specc;global amt;global cas;global op;global opno;global doc_name;global spec
     use=usern.get()
     n=str(use)
     nam=namen.get()
@@ -31,7 +30,6 @@ def success():
     conn.close()
     r.destroy()
     import CarMain
-    r.destroy()
 
 usernameLabel = Label(r, text="USERNAME").grid(row=0, column=0)
 usern = StringVar()
@@ -53,9 +51,7 @@ phonen = StringVar()
 phonena = str(phonen)
 phoneEntry = Entry(r, textvariable=phonen).grid(row=3, column=1)
 
-loginButton = Button(r, text="Login", command=success).grid(row=4, column=0)
-
-
+loginButton = Button(r, text="RENT", command=success).grid(row=4, column=0)
 
 
 r.mainloop()

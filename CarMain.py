@@ -7,14 +7,23 @@ r = tk.Tk()
 r.geometry("500x400")
 r.title('CUSTOMER DETAILS')
 
+
+
+
 def Cust():
+    r.destroy()
     import Customer
+    
 
 def Rute():
+    r.destroy()
     import ReturnACar
+    
 
 def logOut():
+    r.destroy()
     import loginpage
+    
 
 button = tk.Button(r, text='RENT A CAR', width=25,command=Cust).place(x = 170, y=100)
 
